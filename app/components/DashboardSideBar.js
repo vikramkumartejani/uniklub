@@ -16,7 +16,7 @@ const CustomLink = ({ href, label, iconActiveSrc, iconSrc }) => {
         onMouseEnter={() => setIsActive(true)}
         onMouseLeave={() => setIsActive(false)}
       >
-        <Image src={isActive ? iconSrc : iconActiveSrc} alt='Logo' width={24} height={24} />
+        <Image src={isActive ? iconSrc : iconActiveSrc} alt='Logo' width={22} height={15} className=' h-full' />
         {label}
       </div>
     </Link>
@@ -29,9 +29,9 @@ const DashboardSideBar = () => {
       <div className='md:block hidden w-[308px] bg-[#000B33] rounded-[6px] my-[9px]'>
         <div className='flex flex-col gap-[20px] my-[15px] px-[23px]'>
           <CustomLink href='/' label='Home' iconActiveSrc='/assets/homeicon.svg' iconSrc='/assets/homeicon-active.svg' />
-          <CustomLink href='/revenue' label='Revenue' iconActiveSrc='/assets/homeicon.svg' iconSrc='/assets/homeicon-active.svg' />
-          <CustomLink href='/verticals' label='Verticals' iconActiveSrc='/assets/homeicon.svg' iconSrc='/assets/homeicon-active.svg' />
-          <CustomLink href='/connect' label='Connect' iconActiveSrc='/assets/homeicon.svg' iconSrc='/assets/homeicon-active.svg' />
+          <CustomLink href='/revenue' label='Revenue' iconActiveSrc='/assets/revenueicon.svg' iconSrc='/assets/revenueicon-active.svg' />
+          <CustomLink href='/verticals' label='Verticals' iconActiveSrc='/assets/verticalsicon.svg' iconSrc='/assets/verticalsicon-active.svg' />
+          <CustomLink href='/connect' label='Connect' iconActiveSrc='/assets/connecticon.svg' iconSrc='/assets/connecticon-active.svg' />
         </div>
       </div>
 

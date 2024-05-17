@@ -83,7 +83,7 @@ const DashboardNavbar = () => {
                         </div>
                         <div className="ml-[40px] mt-[87px] flex items-center gap-[25px]">
                             <Image src="/assets/Arrow 2.png" alt="Logo" width={34} height={20} />
-                            <Link href="#signin" className="text-white text-[18px] leading-[24px] font-medium">
+                            <Link href="/signin" className="text-white text-[18px] leading-[24px] font-medium">
                                 Sign Out
                             </Link>
                         </div>

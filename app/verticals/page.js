@@ -90,7 +90,14 @@ const Verticals = () => {
         <DashboardLayout>
             <div className='mx-[10px] md:mx-[17px] mt-[47px] text-white '>
                 <h1 className='text-[35.31px] leading-[35.31px] tracking-[-0.01em] font-semibold mb-[47px] sm:mb-[80px]'>Verticals</h1>
+                <div className='mb-[30px] flex items-center gap-[5px]'>
+                    <h2 className='text-[#3A5AFE] text-[19.86px] leading-[47.68px] font-semibold underline underline-offset-4 underline-custom'>Export CSV</h2>
+                    <Image src='/assets/icon-coming-soon-verticals.svg' alt='Logo' width={18.75} height={25.72} />
+                </div>
                 <div className='rounded-[20px] w-full max-w-[1085px] border border-white py-[38px] mb-[40px] px-[15px] bg-[#170C42]'>
+                    <div className='border-b border-red-600'>
+                        jkdfgkj
+                    </div>
                     <div className='grid grid-cols-1 gap-[40px] sm:w-full overflow-scroll'>
                         {verticalsitems.map((item) => (
                             <div key={item.id} className="min-w-[500px] overflow-scroll flex items-center">
@@ -102,7 +109,7 @@ const Verticals = () => {
                                     <div className='flex items-center gap-[15px] lg:gap-[39px]'>
                                         <h2 className="text-[16px] leading-[35.31px] font-semibold tracking-[-0.01em]">{item.category}</h2>
                                         <h2 className="text-[#0019FD] text-[16px] leading-[35.31px] font-semibold tracking-[-0.01em]">{item.price}</h2>
-                                    <button className='w-[20px] h-[12px] ml-[10px] lg:ml-[44px]'><FaGreaterThan/></button>
+                                        <button className='w-[20px] h-[12px] ml-[10px] lg:ml-[44px]'><FaGreaterThan /></button>
                                     </div>
                                 </div>
                             </div>

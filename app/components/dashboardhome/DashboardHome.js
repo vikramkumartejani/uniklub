@@ -24,6 +24,38 @@ const DashboardHome = () => {
     yaxis: {
       show: false,
     },
+    xaxis: {
+      show: true,  
+      labels: {
+        show: true,  
+        style: {
+          colors: [],  
+          fontSize: '12px',  
+          fontFamily: 'Helvetica, Arial, sans-serif',  
+          fontWeight: 400,  
+          cssClass: 'apexcharts-xaxis-label', 
+          color:'#fff' 
+        },
+      },
+      axisBorder: {
+        show: false,  
+        color: '#fff',  
+        height: 1,  
+        width: '100%',  
+        offsetX: 0, 
+        offsetY: 0,  
+      },
+      axisTicks: {
+        show: false,  
+        borderType: 'solid',  
+        color: '#fff',  
+        height: 6,  
+        offsetX: 0,  
+        offsetY: 0,  
+      },
+      categories: ['Jun', 'Aug', 'Sep', 'Oct', 'Nov', 'Do', '2024' ], // Optionally set categories if your x-axis represents categories
+    },
+    
     dataLabels: {
       enabled: false
     },
@@ -46,7 +78,7 @@ const DashboardHome = () => {
   const series = [
     {
       name: "series-1",
-      data: [100, 80, 70, 60, 70, 80]
+      data: [100, 80, 70, 60, 70, 80, 80]
     }
   ];
 

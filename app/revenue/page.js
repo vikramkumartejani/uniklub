@@ -24,6 +24,37 @@ const Revenue = () => {
     yaxis: {
       show: false,
     },
+    xaxis: {
+      show: true,  
+      labels: {
+        show: true,  
+        style: {
+          colors: [],  
+          fontSize: '12px',  
+          fontFamily: 'Helvetica, Arial, sans-serif',  
+          fontWeight: 400,  
+          cssClass: 'apexcharts-xaxis-label', 
+          color:'#fff' 
+        },
+      },
+      axisBorder: {
+        show: false,  
+        color: '#fff',  
+        height: 1,  
+        width: '100%',  
+        offsetX: 0, 
+        offsetY: 0,  
+      },
+      axisTicks: {
+        show: false,  
+        borderType: 'solid',  
+        color: '#fff',  
+        height: 6,  
+        offsetX: 0,  
+        offsetY: 0,  
+      },
+      categories: ['2021', 'Jul', '2022', 'Jul', '2023', 'Jul', '2024' ],
+    },
     dataLabels: {
       enabled: false
     },
@@ -31,34 +62,42 @@ const Revenue = () => {
       size: 0,
       style: 'hollow',
     },
-    // fill: {
-    //   type: 'gradient',
-    //   gradient: {
-    //     shadeIntensity: 1,
-    //     opacityFrom: 0.7,
-    //     opacityTo: 0.9,
-    //     stops: [0, 100]
-    //   }
-    // },
 
   };
 
   const series = [
     {
       name: "series-1",
-      data: [19, 11, 14, 11, 15, 14, 13, 12, 9, 8, 7, 6, 5, 4, 3, 2]
+      data: [90, 60, 14, 11, 40, 100]
     }
   ];
   return (
     <DashboardLayout>
       <div className='mx-[10px] md:mx-[17px] mt-[47px]'>
         <h1 className='text-[35.31px] leading-[35.31px] tracking-[-0.01em] font-semibold mb-[47px] sm:mb-[80px] text-white'>Revenue</h1>
-        <div className="row bg-[#000B33] border-[0.5px] border-white rounded-[14px]">
-          <div className=' mt-[30px] mx-[20px]'>
-            <h1 className='text-white text-[22px] leading-[23px] w-[159px]'>Total revenue</h1>
-            <div className='mt-[16px] flex sm:flex-row flex-col gap-[10px] items-end'>
-              <h2 className='text-[#344BFD] text-[54px] leading-[54px] font-medium '>$4,662.66</h2>
-              <p className='text-[16px] text-white leading-[19.36px] font-medium mb-[8px]'>Last 5 years</p>
+        <div className="row bg-[#000B33] bg-opacity-30 border-[0.5px] border-white rounded-[14px]">
+          <div className='flex xl:items-center justify-between xl:flex-row flex-col gap-4'>
+            <div className=' mt-[30px] mx-[20px]'>
+              <h1 className='text-white text-[22px] leading-[23px] w-[159px]'>Total revenue</h1>
+              <div className='mt-[16px] flex sm:flex-row flex-col gap-[10px] items-end'>
+                <h2 className='text-[#344BFD] text-[54px] leading-[54px] font-medium '>$4,662.66</h2>
+                <p className='text-[16px] text-white leading-[19.36px] font-medium mb-[8px]'>Last 5 years</p>
+              </div>
+            </div>
+            <div className='text-white ml-[20px] xl:ml-0 mr-[20px] flex sm:flex-row flex-col justify-center items-center gap-3'>
+              <div className='flex gap-[16px]'>
+                <h5 className='text-[#767676] text-[16px] leading-[35.31px] font-bold'>Filter by</h5>
+                <select className='bg-transparent border-none outline-none text-[16px] leading-[35.31px] font-semibold'>
+                  <option className='bg-transparent text-black text-[16px] leading-[35.31px] font-semibold'>Entire Cataloge</option>
+                  <option className='bg-transparent text-black'>Entire Cataloge</option>
+                </select>
+              </div>
+              <div className='flex gap-2 sm:pl-[30px]'>
+                <button className=' bg-[#160C42] hover:bg-custom-gradient rounded-[8px] min-w-[44px] h-[26px] text-[14px] leading-[35.31px] font-semibold flex items-center justify-center'>6M</button>
+                <button className=' bg-[#160C42] hover:bg-custom-gradient rounded-[8px] min-w-[44px] h-[26px] text-[14px] leading-[35.31px] font-semibold flex items-center justify-center'>1Y</button>
+                <button className=' bg-[#160C42] hover:bg-custom-gradient rounded-[8px] min-w-[44px] h-[26px] text-[14px] leading-[35.31px] font-semibold flex items-center justify-center'>3Y</button>
+                <button className=' bg-[#160C42] hover:bg-custom-gradient rounded-[8px] min-w-[44px] h-[26px] text-[14px] leading-[35.31px] font-semibold flex items-center justify-center'>All</button>
+              </div>
             </div>
           </div>
           <div className="mixed-chart">
